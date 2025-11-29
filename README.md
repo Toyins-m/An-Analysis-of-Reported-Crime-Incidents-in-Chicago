@@ -70,3 +70,6 @@ Using the Tableau charts and Hadoop processing (see project presentation), the p
   - Central business areas
 
 ## 📁 Repository Structure
+- [Project Presentation](Presentation/)
+- [Project Report](Project-report/)
+- [Project Tutorial](Tutorial/)
