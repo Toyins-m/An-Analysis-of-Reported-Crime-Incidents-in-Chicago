@@ -1,87 +1,72 @@
 # An-Analysis-of-Reported-Crime-Incidents-in-Chicago
 
 ## 📌 Project Description
-This project analyzes Los Angeles farmers’ market sales, EBT usage, vendor performance, and seasonal trends using the combined All Market MMM Data 2021–2022 dataset. Using Power BI for data transformation and Tableau for visual analytics, the project investigates how EBT (Electronic Benefit Transfer) impacts revenue, vendor performance, and community food access within Food Access LA markets.
+This project uses Big Data processing (Hadoop + Hive) and advanced visualization (Tableau) to analyze 5.8M+ Chicago Police Department crime records (2001–2020).
+Our team performed large-scale data ingestion, distributed processing, temporal & geospatial analysis, and pattern discovery using a 3-node Hadoop cluster.
 
-The analysis provides insights that support food equity initiatives, strengthen vendor sustainability, and help organizations optimize farmers’ market operations.
+This project demonstrates real-world data engineering + analytics workflow and mirrors enterprise Big Data pipelines.
 
 ## 🎯 Objectives / Goals
-- Clean, transform, and model farmers’ market datasets using Power BI
-- Analyze EBT usage trends, vendor performance, and market revenue
-- Identify seasonal patterns and growth indicators across markets
-- Build Tableau dashboards showing market, vendor, and EBT patterns
-- Provide actionable recommendations to improve food access and market performance
-- Understand community impact based on socioeconomic and food insecurity trends
+- Process a multi-gigabyte (1.7GB) Chicago crime dataset using a Hadoop cluster
+- Perform distributed querying using Hive & Beeline
+- Conduct temporal, spatial, and categorical crime analysis
+- Visualize crime trends across locations, months, years, and offense types
+- Generate insights to support crime reduction and public safety strategies
 
 ## 🧠 Skills Learned
-- Data Cleaning & Modeling (Power BI)
-- Data Visualization (Tableau)
-- Trend Analysis (EBT vs. Total Sales)
-- Vendor & Market Performance Analysis
-- Correlation Analysis (EBT usage + socioeconomic factors)
-- Storytelling with Data
-- Community-focused analytical interpretation
+- Big Data processing with Hadoop (HDFS, YARN) and distributed file management  
+- Data querying, cleaning, and transformation using HiveQL  
+- Large-scale dataset handling (5.8M+ records, 1.7GB CSV)  
+- Building tempo-spatial, geospatial, and categorical dashboards in Tableau  
+- Identifying long-term trends
+- Designing end-to-end data workflows from ingestion → processing → visualization  
+- Data storytelling and presenting analytical insights to stakeholders  
+- Collaborating in team-based analytics projects and version-controlled environments  
 
 ## 🛠 Tools & Technologies
-- Power BI – Data cleaning, transformation, and table merging
-- Tableau – Dashboards, trend analysis, vendor and market comparisons
-- Excel – Data export, calculations, and pivot exploration
-- PowerPoint - Project presentation
+- Hadoop 3.3.3 (HDFS + YARN)
+- Hive / Beeline
+- Apache Hadoop Distributed Cluster (1 master, 2 workers)
+- Tableau
+- Power BI (dataset exploration)
 
 ## 📐 Methodology
-1. Data Cleaning & Preparation (Power BI)
-- Removed unnecessary columns (Comments, Sales Tax, Sales+Tax, VendorID)
-- Assigned correct headers and standardized market naming
-- Added conditional columns for FY labeling
-- Appended all individual market tables into a single unified dataset
+This project followed a full Big Data analytics workflow:
+1. Data Acquisition
+- Downloaded 1.7GB Chicago PD dataset from Kaggle
 
-2. Data Modeling
-- Ensured consistent market-year grouping
-- Validated vendor type categories
-- Calculated revenue, attendance, and POG metrics
+2. Data Ingestion
+- Uploaded data into HDFS and distributed across 3 nodes
 
-3. Data Visualization (Tableau)
-- Generated dashboards analyzing:
-- Top vendors by EBT sales (2021–2022)
-- Market performance (bubble charts)
-- Vendor type sales distribution
-- Seasonal trends in EBT usage and total sales
+3. Data Processing
+- Cleaned, sorted, and queried the dataset using Hive tables
+- Performed aggregations, category analysis, and temporal breakdowns
 
-4. Insight Development & Storytelling
-- Insights were derived by comparing market operations, EBT redemption trends, producer performance, and demographic-driven food insecurity patterns.
+4. Visualization & Insight Generation
+- Built dashboards for geo-spatial heatmaps, temporal trends, arrest analysis, and top crime types
 
-5. Recommendations
-- Expand online EBT options
-- Increase producer incentives
-- Leverage seasonal spikes for targeted outreach
-- Diversify vendor offerings
+5. Insight Interpretation
+- Identified high-crime areas, peak months/years, arrest ratios, and emerging trends
 
 ## 📊 Outcomes / Results
-📈 1. EBT Sales Increased Significantly (2021 → 2022)
-- Data shows a clear upward trend in EBT usage year-over-year
-- Growth aligns with rising CalFresh enrollment in LA County
+Using the Tableau charts and Hadoop processing (see project presentation), the project revealed:
 
-🏆 2. Producers (Farmers) Dominate Market Revenue
-- Producers account for ~74% of all total sales across markets
-- They also rank highest in EBT usage, serving low-income households
+🔹 Crime Distribution Findings
+- Theft (1.5M cases) and Battery (1.18M) were the two highest incident types.
+- Crime locations were dominated by streets, residences, and sidewalks, accounting for the majority of incidents.
 
-💰 3. Hollywood Farmers’ Market Is the Top Performer
-- Highest total sales
-- Highest EBT usage
-- Most consistent operational days
+🔹 Arrest Trends
+- Arrest-to-incident ratios varied dramatically by offense type, as shown in the bar comparison.
+- Significant gaps highlighted areas lacking enforcement and requiring deeper policy review.
 
-📊 4. Vendor Performance Trends
-- Delmy’s Pupusas showed significant EBT sales growth from 2021 to 2022
-- Producer vendors maintained consistent growth even when adjusted for vendor count
+🔹 Temporal Insights
+- Crime peaked in July 2002 (46,012 incidents) — the highest monthly count across the entire dataset.
+- Long-term trend shows a consistent decline in crime from 2001–2020, despite seasonal fluctuations.
 
-📅 5. Seasonal Trends Identified
-- Peak EBT usage occurs in Spring and Summer
-- Sales drop sharply in November–December
-
-🌱 6. Community Impact Insights
-- Your analysis confirmed that farmers' markets:
-- Improve food access for low-income households
-- Sustain small farmers with high revenue retention (up to 90¢ per dollar)
-- Reduce food insecurity in LA communities
+🔹 Geo-Spatial Insights
+- Heatmap showed crime concentrated around:
+  - Chicago’s South Side
+  - Near West Side
+  - Central business areas
 
 ## 📁 Repository Structure
